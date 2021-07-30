@@ -1,7 +1,7 @@
-Android TV Plugin for Cordova
+Android TV and Google TV Plugin for Cordova
 ==============================
 
-Cordova plugin to add support for Android TV to your project's AndroidManifest.xml.
+Cordova plugin to add support for Android TV and Google TV to your project's AndroidManifest.xml.
 
 Install
 -------
