@@ -26,12 +26,11 @@ module.exports = function (context) {
     }
     if (fs.existsSync(manifestFile)) {
         processManifest(manifestFile);
-    } else {
-        /* Fallback for cordova 7+ folder structure */
-        platformRoot = path.join(context.opts.projectRoot, 'platforms/android/app/src/main');
-        manifestFile = path.join(platformRoot, 'AndroidManifest.xml');
-        if (fs.existsSync(manifestFile)) {
-            processManifest(manifestFile);
-        }
+    }
+    /* cordova 7+ folder structure */
+    platformRoot = path.join(context.opts.projectRoot, 'platforms/android/app/src/main');
+    manifestFile = path.join(platformRoot, 'AndroidManifest.xml');
+    if (fs.existsSync(manifestFile)) {
+        processManifest(manifestFile);
     }
 };
